@@ -1,12 +1,17 @@
 <template>
-  <commonNavBar class="bg-black text-white"> </commonNavBar>
-  <About></About>
+  <main>
+    <div class="bg-black">
 
-  <commonFooter></commonFooter>
+      <commonNavBar class=""> </commonNavBar>
+    </div>
+    <About></About>
+
+    <commonFooter></commonFooter>
+  </main>
 </template>
 
 <script setup>
-import commonNavBar from "../../components/common/NavBar.vue";
+import commonNavBar from "../../components/common/NavBar2.vue";
 import About from "../../components/About/index.vue";
 
 import commonFooter from "../../components/common/Footer.vue";
