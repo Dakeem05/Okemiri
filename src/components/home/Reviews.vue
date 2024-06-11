@@ -3,12 +3,12 @@
 
 <template>
   <main class="bg-[#00ccff] py-[3rem]">
-    <div class="mx-auto max-w-7xl relative">
+    <div class="mx-auto max-w-7xl relative px-10">
         <article class="text-center">
         <h1 class="font-[300]  text-[2rem]">Reviews</h1>
         <h2 class="font-manjari font-[700] text-white text-[2.5rem] mt-[1rem]">HEAR FROM OUR CUSTOMERS</h2>
     </article>
-    <section class="grid grid-cols-3 gap-[3rem] mt-[3rem]">
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-[3rem] mt-[3rem]">
         <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] w-fit flex flex-col">
             <div class="w-fit mx-auto mb-[2rem]">
                 <img src="../../assets/images/Avatar Image.png" alt="LIAM BROWN" width="70px">

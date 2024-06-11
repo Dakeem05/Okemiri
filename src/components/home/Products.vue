@@ -2,12 +2,12 @@
 </script>
 
 <template>
-  <main class="max-w-7xl mx-auto relative ">
+  <main class="max-w-7xl mx-auto relative px-10 ">
     <article class="text-center">
-        <h2 class="font-[600] font-plus-jakarta-sans text-[3rem]">Some of our Products</h2>
-        <p class="font-[400] text-[1.5rem] w-[80%] mt-2 mx-auto">Discover our extensive range of durable hoses at Okemiri Hose, where quality is always guaranteed.</p>
+        <h2 class="font-[600] font-plus-jakarta-sans text-[2.5rem] lg:text-[3rem]">Some of our Products</h2>
+        <p class="font-[400] text-[1.5rem] w-full lg:w-[80%] mt-2 mx-auto">Discover our extensive range of durable hoses at Okemiri Hose, where quality is always guaranteed.</p>
     </article>
-    <section class="grid grid-cols-3 gap-[2rem] mt-[4rem]">       
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-[2rem] mt-[4rem]">       
         <div class="[box-shadow:0px_4px_16px_0px_#0000001A] rounded-2xl pb-[2rem]">
             <img src="../../assets/images/Rectangle 5.png" alt="">
             <div class="pl-[2rem] mt-[2rem]">
