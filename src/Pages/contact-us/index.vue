@@ -1,5 +1,5 @@
 <template>
-<commonNavBar class="bg-black text-white" ></commonNavBar>
+<commonNavBar class="bg-black text-white"></commonNavBar>
 <Contact></Contact>
 <commonFooter></commonFooter>
 </template>
