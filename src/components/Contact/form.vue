@@ -22,7 +22,7 @@ const sendEmail = () => {
     to_email:"edidiongsamuel14@gmail.com"
   };
 
-  emailjs.send('service_5lguqnn', 'template_06a8d4c', templateParams, 'zlEYbgyaDL6IJFHQ')
+  emailjs.send('service_5lguqnn', 'template_06a8d4c', templateParams, 'zllEYbgyaDL6IJFHQ')
     .then(response => {
     form.value.name = ''
     form.value.email = ''
