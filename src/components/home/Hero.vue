@@ -2,8 +2,8 @@
 </script>
 
 <template>
-   <section class="max-w-7xl mx-auto relative flex flex-col lg:flex-row  justify-between ">
-  <main class="flex flex-col gap-10 lg:flex-row">
+   <!-- <section class="max-w-7xl relative flex flex-col lg:flex-row justify-between "> -->
+  <main class="flex flex-col  lg:flex-row">
     <div class="w-full lg:w-[50%] pt-[2rem]">
        <div class="ml-auto w-full lg:w-[90%] px-10 lg:px-0">
             <h1 class=" font-[700] text-[2.5rem] lg:text-[4rem] font-plus-jakarta-sans">Welcome to Okemiri Hose Your Trusted Partner.</h1>
@@ -16,7 +16,7 @@
     </div>
    
   </main>
-  </section>
+  <!-- </section> -->
 </template>    
 
 <style>

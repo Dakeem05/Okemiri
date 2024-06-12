@@ -16,7 +16,7 @@
             v-model="searchTerm"
             type="text"
             placeholder="Look for products..."
-            class="w-full lg:w-[80%] px-4 py-4 text-sm border border-[#1D1E1C80] rounded-full focus:outline-none"
+            class="w-full lg:w-[80%] bg-white px-4 py-4 text-sm border border-[#1D1E1C80] rounded-full focus:outline-none"
           />
         </form>
         <div class="pt-3 lg:pt-10 px-10 lg:px-0">
@@ -31,6 +31,7 @@
           :title="product.name"
           :description="product.description"
           :image="product.image"
+          
         />
       </div>
       <homeReviews></homeReviews>
