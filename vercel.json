@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    {g
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
