@@ -1,60 +1,62 @@
-<template>
-  <div class="py-[50px]">
-    <div class="flex flex-col lg:flex-row gap-10 relative">
-      <div class="w-full lg:w-[40%] px-10">
-        <h1 class="font-extrabold font-plus-jakarta-sans text-[96px] leading-[115.2px]">
-          Our Product Catalog
-        </h1>
-        <p class="text-[28px] font-poppins pt-5">
-          Discover our extensive range of durable hoses at Okemiri Hose, where quality is always guaranteed.
-        </p>
-      </div>
-      <div class="relative w-full lg:w-[60%]">
-        <div class="absolute top-5 left-1/2 transform -translate-x-1/2 w-[80%]">
-          <form @submit.prevent="handleSearch" class="flex items-center bg-white rounded-full shadow-lg p-2">
-            <input
-              v-model="searchTerm"
-              type="text"
-              placeholder="Look for Products"
-              class="w-full px-4 py-2 text-sm border border-gray-300 rounded-full focus:outline-none"
-            />
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-full ml-2">
-              Search
-            </button>
-          </form>
-        </div>
-        <img src="../../assets/images/product1.png" alt="Product Image" class="w-full">
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
-import { ref } from 'vue';
-
-const searchTerm = ref('');
-const products = ref([
-  // Example products structure
-  { name: 'Product 1', description: 'Description of Product 1' },
-  { name: 'Product 2', description: 'Description of Product 2' },
-  // Add more products here
-]);
-const searchResults = ref([]);
-
-const handleSearch = () => {
-  console.log('Searching for:', searchTerm.value);
-
-  // Example: Filter products based on searchTerm
-  searchResults.value = products.value.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.value.toLowerCase())
-  );
-
-  // You can display searchResults in your template as needed
-};
 </script>
 
-<style scoped>
-.box {
-  box-shadow: 0px 1.98px 3.96px 0px #0000001A;
-}
+<template>
+  <main class="max-w-7xl mx-auto relative px-10 ">
+    <article class="text-center">
+        <h2 class="font-[600] font-plus-jakarta-sans text-[2.5rem] lg:text-[3rem]">Some of our Products</h2>
+        <p class="font-[400] text-[1.5rem] w-full lg:w-[80%] mt-2 mx-auto">Discover our extensive range of durable hoses at Okemiri Hose, where quality is always guaranteed.</p>
+    </article>
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-[2rem] mt-[4rem]">       
+        <div class="[box-shadow:0px_4px_16px_0px_#0000001A] rounded-2xl pb-[2rem]">
+            <img src="../../assets/images/Rectangle 5.png" alt="">
+            <div class="pl-[2rem] mt-[2rem]">
+                <h3 class="font-[700] font-manjari text-3xl">Gear Plate</h3>
+                <p class="text-lg">Precision metal component for machinery assembly.</p>
+            </div>
+        </div>
+        <div class="[box-shadow:0px_4px_16px_0px_#0000001A] rounded-2xl pb-[2rem]">
+            <img src="../../assets/images/Rectangle 5 (1).png" alt="">
+            <div class="pl-[2rem] mt-[2rem]">
+                <h3 class="font-[700] font-manjari text-3xl">Suction Hose</h3>
+                <p class="text-lg">Flexible tube for drawing fluids with powerful suction.</p>
+            </div>
+        </div>
+        <div class="[box-shadow:0px_4px_16px_0px_#0000001A] rounded-2xl pb-[2rem]">
+            <img src="../../assets/images/Rectangle 5 (2).png" alt="">
+            <div class="pl-[2rem] mt-[2rem]">
+                <h3 class="font-[700] font-manjari text-3xl">Dredging Hose</h3>
+                <p class="text-lg">Flexible, durable hose for efficient sediment transport</p>
+            </div>
+        </div>
+        <div class="[box-shadow:0px_4px_16px_0px_#0000001A] rounded-2xl pb-[2rem]">
+            <img src="../../assets/images/Rectangle 5 (3).png" alt="">
+            <div class="pl-[2rem] mt-[2rem]">
+                <h3 class="font-[700] font-manjari text-3xl">Oil Hose</h3>
+                <p class="text-lg">Flexible condult for effient oil transfer in machinery</p>
+            </div>
+        </div>
+        <div class="[box-shadow:0px_4px_16px_0px_#0000001A] rounded-2xl pb-[2rem]">
+            <img src="../../assets/images/Rectangle 5 (4).png" alt="">
+            <div class="pl-[2rem] mt-[2rem]">
+                <h3 class="font-[700] font-manjari text-3xl">Bitumen Composite Hose</h3>
+                <p class="text-lg">Flexible, durable hose for bitumen and asphalt transport</p>
+            </div>
+        </div>
+        <div class="[box-shadow:0px_4px_16px_0px_#0000001A] rounded-2xl pb-[2rem]">
+            <img src="../../assets/images/Rectangle 5 (5).png" alt="">
+            <div class="pl-[2rem] mt-[2rem]">
+                <h3 class="font-[700] font-manjari text-3xl">Discharge Dredging Hose</h3>
+                <p class="text-lg">Robust hose for efficient dredging discharge.</p>
+            </div>
+        </div>
+    </section>
+    <!-- <div> -->
+        <router-link to="/products" class="bg-black text-white w-fit mx-auto flex my-[2.5rem] px-9 py-5 rounded-full">View more</router-link>
+    <!-- </div> -->
+  </main>
+</template>    
+
+<style>
+
 </style>

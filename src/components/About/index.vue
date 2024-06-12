@@ -1,5 +1,6 @@
 <template>
   <div class="">
+    <main class="mx-auto max-w-7xl relative">
     <div class="w-full lg:h-[500px] h-full bg-black">
       <div class="text-center">
         <h2 class="text-[#00CCFF] text-[36px]">About</h2>
@@ -22,11 +23,13 @@
         </div>
       </div>
     </div>
+   
 
     <div class=" mt-20 lg:mt-[350px] mb-10">
       <Aboutstory></Aboutstory>
     </div>
     <Aboutvalues></Aboutvalues>
+     </main>
     <div class="py-10">
       <homeBenefits></homeBenefits>
     </div>
