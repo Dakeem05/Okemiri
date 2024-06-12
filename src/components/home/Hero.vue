@@ -10,11 +10,14 @@
             <p class="mt-[2rem] text-[1.8rem]">We specialized in providing durable and reliable hoses for a wide range of industries and applications. With our extensive selection of hoses, unmatched satisfaction, we are your one-stop shop for all your industrial hose needs.</p>
         </div>
     </div>
-    <div class="w-full lg:w-[50%] px-10 lg:px-0">
+    <div class="w-full lg:w-[50%]">
+    <div class="px-10 lg:px-0">
         <img src="../../assets/images/Rectangle 1.png" class="object-cover h-fit w-fit" alt="Hero Img">
-        <hr>
+       
     </div>
-   
+     <div class="border-[1.5px] border-gray-400 mt-5 lg:hidden block"></div>
+     </div>
+
   </main>
   <!-- </section> -->
 </template>    
