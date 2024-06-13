@@ -57,6 +57,7 @@
   <div v-else>
     <swiper
     :slides-per-view="1"
+    :space-between="50"
     :modules="modules"
     class="my-swiper"
     :loop="true"
