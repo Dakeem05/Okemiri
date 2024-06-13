@@ -1,57 +1,172 @@
-<script setup>
+<!-- <script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/swiper-bundle.css';
+
+import image1 from '../../assets/images/Avatar Image.png';
+import image2 from '../../assets/images/Avatar Image (1).png';
+import image3 from '../../assets/images/Avatar Image (2).png';
+import image4 from '../../assets/images/Avatar Image (3).png';
+import image5 from '../../assets/images/Avatar Image (4).png';
+
+const reviews = [
+  {
+    name: "LIAM BROWN",
+    image: image1,
+    message: "The hoses are incredibly durable and reliable. They've significantly improved my operational efficiency."
+  },
+  {
+    name: "MICHAEL RODRIGUEZ",
+    image: image2,
+    message: "I'm impressed with the quality of the lay-flat hoses. They are built to last and withstand tough conditions, providing consistent performance even under high-pressure applications."
+  },
+  {
+    name: "MICHAEL THOMPSON",
+    image: image3,
+    message: "I've been using hoses from this company for years, and they have never let us down. Their commitment to quality is unparalleled and keeps us coming back for all our hose needs."
+  },
+  {
+    name: "DAVID WILSON",
+    image: image4,
+    message: "Great customer service and excellent hoses! We are very pleased with our purchase and will definitely return."
+  },
+  {
+    name: "ALEX NGUYEN",
+    image: image5,
+    message: "The quality of the rubber hoses is unmatched. They have become an integral part of our operations, providing consistent performance and reliability in every use."
+  }
+];
 </script>
 
 <template>
   <main class="bg-[#00ccff] py-[3rem]">
     <div class="mx-auto max-w-7xl relative px-10">
-        <article class="text-center">
-        <h1 class="font-[300]  text-[2rem]">Reviews</h1>
+      <article class="text-center">
+        <h1 class="font-[300] text-[2rem]">Reviews</h1>
         <h2 class="font-manjari font-[700] text-white text-[2.5rem] mt-[1rem]">HEAR FROM OUR CUSTOMERS</h2>
-    </article>
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-[3rem] mt-[3rem]">
-        <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] w-fit flex flex-col">
+      </article>
+      <Swiper
+        :slides-per-view="1"
+        :space-between="30"
+        :breakpoints="{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }"
+        navigation
+        :pagination="{ clickable: true }"
+        class="mt-[3rem]"
+      >
+        <SwiperSlide v-for="review in reviews" :key="review.name">
+          <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] flex flex-col">
             <div class="w-fit mx-auto mb-[2rem]">
-                <img src="../../assets/images/Avatar Image.png" alt="LIAM BROWN" width="70px">
+              <img :src="review.image" :alt="review.name" width="70px">
             </div>
-            <p>The hoses are incredibly durable and reliable. They've significantly improved my operational efficiency.</p>
-            <h5 class="text-center mt-[2rem] font-[700] font-dm-sans">LIAM BROWN</h5>
-        </div>
-        <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] w-fit flex flex-col">
-            <div class="w-fit mx-auto mb-[2rem]">
-                <img src="../../assets/images/Avatar Image (1).png" alt="MICHAEL RODRIGUEZ" width="70px">
-            </div>
-            <p>I'm impressed with the quality of the lay-flat hoses. They are built to last and withstand tough conditions, providing consistent performance even under high-pressure applications"</p>
-            <h5 class="text-center mt-[2rem] font-[700] font-dm-sans">MICHAEL RODRIGUEZ</h5>
-        </div>
-        <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] w-fit flex flex-col">
-           <div class="w-fit mx-auto mb-[2rem]">
-            <img src="../../assets/images/Avatar Image (2).png" alt="MICHAEL THOMPSON" width="70px">
-           </div>
-            <p>I've been using hoses from this company for years, and they have never let us down. Their commitment to quality is unparalleled and keeps us coming back for all our hose needs.</p>
-            <h5 class="text-center mt-[2rem] font-[700] font-dm-sans">MICHAEL THOMPSON</h5>
-        </div>
-        <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] w-fit flex flex-col">
-            <div class="w-fit mx-auto mb-[2rem]">
-                <img src="../../assets/images/Avatar Image (3).png" alt="DAVID WILSON" width="70px">
-            </div>
-            <p>Great customer service and excellent hoses!
-                <br>
-                We are very pleased with our purchase and will definitly return.
-            </p>
-            <h5 class="text-center mt-[2rem] font-[700] font-dm-sans">DAVID WILSON</h5>
-        </div>
-        <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] w-fit flex flex-col">
-            <div class="w-fit mx-auto mb-[2rem]">
-                <img src="../../assets/images/Avatar Image (4).png" alt="ALEX NGUYEN" width="70px">
-            </div>
-            <p>The quality of the rubber hoses is unmatched. They have become an integral part of our operations, providing consistent performance and reliability in every use.</p>
-            <h5 class="text-center mt-[2rem] font-[700] font-dm-sans">ALEX NGUYEN</h5>
-        </div>
-    </section>
+            <p>{{ review.message }}</p>
+            <h5 class="text-center mt-[2rem] font-[700] font-dm-sans">{{ review.name }}</h5>
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   </main>
-</template>    
+</template>
 
-<style>
+<style scoped>
+@import "swiper/swiper-bundle.css";
+</style> -->
 
-</style> 
+
+<template>
+     <main class="bg-[#00ccff] py-[3rem]">
+    <div class="mx-auto max-w-7xl relative px-10">
+      <article class="text-center">
+        <h1 class="font-[300] text-[2rem]">Reviews</h1>
+        <h2 class="font-manjari font-[700] text-white text-[2.5rem] mt-[1rem]">HEAR FROM OUR CUSTOMERS</h2>
+      </article>
+  <Swiper
+    :slides-per-view="3"
+    :space-between="50"
+    navigation
+    :pagination="{ clickable: true }"
+    :scrollbar="{ draggable: true }"
+    @swiper="onSwiper"
+    @slideChange="onSlideChange"
+    class="my-swiper"
+  >
+    <SwiperSlide v-for="(review, index) in reviews" :key="index">
+      <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] flex flex-col">
+        <div class="w-fit mx-auto mb-[2rem]">
+          <img :src="review.image" :alt="review.name" width="70px">
+        </div>
+        <p>{{ review.message }}</p>
+        <h5 class="text-center mt-[2rem] font-[700] font-dm-sans">{{ review.name }}</h5>
+      </div>
+    </SwiperSlide>
+  </Swiper>
+  </div>
+  </main>
+</template>
+
+<script setup>
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import 'swiper/swiper-bundle.css';
+
+  import image1 from '../../assets/images/Avatar Image.png';
+  import image2 from '../../assets/images/Avatar Image (1).png';
+  import image3 from '../../assets/images/Avatar Image (2).png';
+  import image4 from '../../assets/images/Avatar Image (3).png';
+  import image5 from '../../assets/images/Avatar Image (4).png';
+
+  const reviews = [
+    {
+      name: "LIAM BROWN",
+      image: image1,
+      message: "The hoses are incredibly durable and reliable. They've significantly improved my operational efficiency."
+    },
+    {
+      name: "MICHAEL RODRIGUEZ",
+      image: image2,
+      message: "I'm impressed with the quality of the lay-flat hoses. They are built to last and withstand tough conditions, providing consistent performance even under high-pressure applications."
+    },
+    {
+      name: "MICHAEL THOMPSON",
+      image: image3,
+      message: "I've been using hoses from this company for years, and they have never let us down. Their commitment to quality is unparalleled and keeps us coming back for all our hose needs."
+    },
+    {
+      name: "DAVID WILSON",
+      image: image4,
+      message: "Great customer service and excellent hoses! We are very pleased with our purchase and will definitely return."
+    },
+    {
+      name: "ALEX NGUYEN",
+      image: image5,
+      message: "The quality of the rubber hoses is unmatched. They have become an integral part of our operations, providing consistent performance and reliability in every use."
+    }
+  ];
+
+  const onSwiper = (swiper) => {
+    console.log(swiper);
+  };
+
+  const onSlideChange = () => {
+    console.log('slide change');
+  };
+</script>
+
+<style scoped>
+  @import "swiper/swiper-bundle.css";
+
+  .my-swiper {
+    width: 100%;
+    padding-bottom: 50px; /* Ensure space for the scrollbar */
+  }
+</style>
