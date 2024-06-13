@@ -42,7 +42,7 @@ const toggleMenu = () => {
       </ul>
 
       <!-- Desktop Get a Quote Button -->
-      <router-link to="/contact-us" class="hidden lg:block">
+      <router-link to="/products" class="hidden lg:block">
         <button class="bg-black text-white px-8 py-4 rounded-full">Get a Quota</button>
       </router-link>
     </nav>

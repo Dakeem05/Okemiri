@@ -30,7 +30,7 @@ const props = defineProps({
 const router = useRouter();
 
 const handleBuyNow = () => {
-  const message = `I am interested in this product: ${props.title}`;
+  const message = `I am interested in buying this product: ${props.title}`;
   router.push({ path: '/contact-us', query: { message } });
 };
 </script>
