@@ -3,7 +3,7 @@
         <div class="bg-black">
             <commonNavBar class="bg-black text-white"></commonNavBar>
         </div>
-        <Contact></Contact>
+        <Contact class="pt-[4rem]"></Contact>
         <commonFooter></commonFooter>
     </main>
 </template>

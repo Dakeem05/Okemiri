@@ -9,15 +9,15 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <main class="max-w-7xl mx-auto relative">
-    <nav class="py-6 px-10 flex justify-between items-center">
+  <main class="z-40 fixed top-0 w-[100%] bg-white ">
+    <nav class="max-w-7xl mx-auto relative py-6 px-10 flex justify-between items-center">
       <!-- Logo -->
       <router-link to="/" class="block">
         <img src="../../assets/images/transparent 1.png" alt="Okemiri logo" class="h-10">
       </router-link>
       
       <!-- Hamburger Menu Icon -->
-      <div class="lg:hidden">
+      <div class=" lg:hidden">
         <button @click="toggleMenu" aria-label="Toggle Menu">
           <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -29,7 +29,7 @@ const toggleMenu = () => {
       </div>
       
       <!-- Menu Links -->
-      <ul :class="{'hidden': !isMenuOpen, 'flex': isMenuOpen}" class="lg:flex flex-col lg:flex-row gap-6 lg:gap-8 font-medium text-lg lg:pt-0 pt-4 absolute lg:static bg-white lg:bg-transparent w-full lg:w-auto left-0 lg:left-auto top-16 lg:top-auto shadow-lg lg:shadow-none text-center lg:py-0">
+      <ul :class="{'hidden': !isMenuOpen, 'flex': isMenuOpen}" class="lg:flex flex-col lg:flex-row gap-6 lg:gap-8 font-medium text-lg lg:pt-0 pt-[4rem] lg:static bg-white z-40 h-[100%] fixed  lg:bg-transparent w-full lg:w-auto left-0 lg:left-auto top-16 lg:top-auto shadow-lg lg:shadow-none text-center lg:py-0">
         <li><router-link active-class="underline decoration-black" to="/" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">Home</router-link></li>
         <li><router-link active-class="underline decoration-black" to="/products" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">Products</router-link></li>
         <li><router-link active-class="underline decoration-black" to="/about-us" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">About Us</router-link></li>

@@ -1,6 +1,6 @@
 <template>
 <commonNavBar></commonNavBar>
-<Products></Products>
+<Products class="pt-[4rem]"></Products>
 <commonFooter></commonFooter>
 </template>
 
