@@ -91,26 +91,28 @@ const reviews = [
         <h1 class="font-[300] text-[2rem]">Reviews</h1>
         <h2 class="font-manjari font-[700] text-white text-[2.5rem] mt-[1rem]">HEAR FROM OUR CUSTOMERS</h2>
       </article>
-  <Swiper
+  <swiper
     :slides-per-view="3"
     :space-between="50"
-    navigation
-    :pagination="{ clickable: true }"
-    :scrollbar="{ draggable: true }"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
+    :modules="modules"
     class="my-swiper"
+    :loop="true"
+    :autoplay="{
+      delay: 2500,
+      disableOnInteraction: false,
+    }"
+
   >
-    <SwiperSlide v-for="(review, index) in reviews" :key="index">
-      <div class="bg-white px-[2rem] py-[2rem] rounded-[24px] flex flex-col">
+    <swiper-slide v-for="(review, index) in reviews" :key="index">
+      <div class="bg-white px-[2rem] py-[2rem] h-full rounded-[24px] flex flex-col">
         <div class="w-fit mx-auto mb-[2rem]">
           <img :src="review.image" :alt="review.name" width="70px">
         </div>
         <p>{{ review.message }}</p>
         <h5 class="text-center mt-[2rem] font-[700] font-dm-sans">{{ review.name }}</h5>
       </div>
-    </SwiperSlide>
-  </Swiper>
+    </swiper-slide>
+  </swiper>
   </div>
   </main>
 </template>
@@ -118,6 +120,14 @@ const reviews = [
 <script setup>
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import 'swiper/swiper-bundle.css';
+  import 'swiper/css';
+         import 'swiper/css/pagination';
+  import 'swiper/css/navigation';
+
+  import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+
+  
+  const modules = [Autoplay, Pagination, Navigation]
 
   import image1 from '../../assets/images/Avatar Image.png';
   import image2 from '../../assets/images/Avatar Image (1).png';
