@@ -4,7 +4,7 @@
 
       <commonNavBar class=""> </commonNavBar>
     </div>
-    <About class="pt-[4rem]"></About>
+    <About ></About>
 
     <commonFooter></commonFooter>
   </main>
