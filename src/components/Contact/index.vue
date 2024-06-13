@@ -1,4 +1,5 @@
 <template>
+  <section class="mx-auto max-w-7xl relative">
   <div class="">
     <div class="w-full lg:h-[500px] h-full flex flex-col lg:flex-row bg-black gap-10 text-white px-5 lg:px-20 pt-[50px]">
       <div class="w-full lg:w-[50%]">
@@ -32,6 +33,7 @@
      <Contactfaqs></Contactfaqs>
      </div>
   </div>
+  </section>
 </template>
 
 <script setup>

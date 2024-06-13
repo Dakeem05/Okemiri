@@ -1,15 +1,25 @@
 <script setup>
-  import { ref } from 'vue';
-  import emailjs from 'emailjs-com';
+import { ref, onMounted } from 'vue';
+import emailjs from 'emailjs-com';
+import { useRoute } from 'vue-router';
 
-  const form = ref({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+const form = ref({
+  name: '',
+  email: '',
+  phone: '',
+  message: ''
+});
 
-    const responseMessage = ref('');
+const responseMessage = ref('');
+
+const route = useRoute();
+
+onMounted(() => {
+  const queryMessage = route.query.message;
+  if (queryMessage) {
+    form.value.message = queryMessage;
+  }
+});
 
 const sendEmail = () => {
   const templateParams = {
@@ -24,39 +34,37 @@ const sendEmail = () => {
 
   emailjs.send('service_5lguqnn', 'template_06a8d4c', templateParams, 'zllEYbgyaDL6IJFHQ')
     .then(response => {
-    form.value.name = ''
-    form.value.email = ''
-    form.value.phone = ''
-    form.value.message = ''
+      form.value.name = '';
+      form.value.email = '';
+      form.value.phone = '';
+      form.value.message = '';
 
-    responseMessage.value = 'Message sent successfully!';
-    setTimeout(() => {
-      
-      responseMessage.value = '';
-    }, 5000);
+      responseMessage.value = 'Message sent successfully!';
+      setTimeout(() => {
+        responseMessage.value = '';
+      }, 5000);
     })
     .catch(error => {
       console.error('FAILED...', error);
-      form.value.name = ''
-    form.value.email = ''
-    form.value.phone = ''
-    form.value.message = ''
+      form.value.name = '';
+      form.value.email = '';
+      form.value.phone = '';
+      form.value.message = '';
       responseMessage.value = 'Failed to auto-send message. Redirecting to email app...';
-    setTimeout(() => {
-      
-      responseMessage.value = '';
-    }, 5000);
+      setTimeout(() => {
+        responseMessage.value = '';
+      }, 5000);
       redirectToEmailApp(templateParams);
     });
 };
 
 const redirectToEmailApp = (params) => {
-      const { name, email, message, phone, to_email } = params;
-      const subject = encodeURIComponent('Contact Us Form Submission');
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`);
-      const mailtoLink = `mailto:${to_email}?subject=${subject}&body=${body}`;
-      window.location.href = mailtoLink;
-    };
+  const { name, email, message, phone, to_email } = params;
+  const subject = encodeURIComponent('Contact Us Form Submission');
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`);
+  const mailtoLink = `mailto:${to_email}?subject=${subject}&body=${body}`;
+  window.location.href = mailtoLink;
+};
 </script>
 
 <template>
