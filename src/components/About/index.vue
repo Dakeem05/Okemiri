@@ -3,7 +3,7 @@
     <main class="mx-auto max-w-7xl relative">
     <div class="w-full lg:h-[500px] h-full bg-black">
       <div class="text-center">
-        <h2 class="text-[#00CCFF] text-[36px]">About</h2>
+        <h2 class="text-[#00CCFF] text-[36px] mt-[5rem] lg:mt-[6rem]">About</h2>
         <h1 class="text-white lg:text-[64px] text-[32px] font-poppins font-bold">
           The Dynamics of Our <br />Operations at
           <span class="text-[#FFD233]">OKEMIRI</span>

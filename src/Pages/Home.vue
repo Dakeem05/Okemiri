@@ -14,7 +14,7 @@ import Footer from '../components/common/Footer.vue';
   <main class="">
     <section>
         <nav-bar></nav-bar>
-        <div class="mt-[2rem]">
+        <div class="mt-[2rem] pt-[4rem]">
             <Hero></Hero>
         </div>
         <div class="mt-[4rem]">
