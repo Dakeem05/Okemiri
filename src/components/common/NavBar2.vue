@@ -29,7 +29,7 @@ const toggleMenu = () => {
       </div>
       
       <!-- Menu Links -->
-      <ul :class="{'hidden': !isMenuOpen, 'flex': isMenuOpen}" class="lg:flex flex-col lg:flex-row gap-6 lg:gap-8 font-medium text-lg lg:pt-0 pt-[4rem] lg:static z-40 h-[100%] fixed bg-black text-white lg:text-white lg:bg-transparent w-full lg:w-auto left-0 lg:left-auto top-16 lg:top-auto shadow-lg lg:shadow-none text-center lg:py-0 py-10 ">
+      <ul :class="{'hidden': !isMenuOpen, 'flex': isMenuOpen}" class="lg:flex flex-col lg:flex-row gap-6 lg:gap-8 font-medium text-lg lg:pt-0 pt-[4rem] lg:static z-40 h-[100%] mt-[2rem] lg:mt-0 fixed bg-black text-white lg:text-white lg:bg-transparent w-full lg:w-auto left-0 lg:left-auto top-16 lg:top-auto shadow-lg lg:shadow-none text-center lg:py-0 py-10 ">
         <li><router-link active-class="underline decoration-white" to="/" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">Home</router-link></li>
         <li><router-link active-class="underline decoration-white" to="/products" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">Products</router-link></li>
         <li><router-link active-class="underline decoration-white" to="/about-us" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">About Us</router-link></li>
@@ -37,7 +37,7 @@ const toggleMenu = () => {
         
         <!-- Mobile Get a Quote Button -->
         <li class="lg:hidden mt-4 text-center">
-          <button class="bg-black text-white  px-8 py-4 rounded-full">Get a Quota</button>
+          <button class="bg-white text-black  px-8 py-4 rounded-full">Get a Quota</button>
         </li>
       </ul>
 
