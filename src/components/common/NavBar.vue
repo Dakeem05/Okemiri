@@ -9,17 +9,21 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <main class="z-40 fixed top-0 w-[100%] bg-white ">
+  <main class="z-40 fixed top-0 w-[100%] lg:bg-white bg-black">
     <nav class="max-w-7xl mx-auto relative py-6 px-10 flex justify-between items-center">
       <!-- Logo -->
-      <router-link to="/" class="block">
-        <img src="../../assets/images/transparent 1.png" alt="Okemiri logo" class="h-10">
+        <div class="w- lg:w-80 h-20 rounded-full bg-black absolute">
+
+       </div>
+      <router-link to="/" class="block lg:px-10">
+       
+        <img src="../../assets/images/transparent 1.png" alt="Okemiri logo" class="h-10 relative">
       </router-link>
       
       <!-- Hamburger Menu Icon -->
-      <div class=" lg:hidden">
+      <div class="text-white lg:hidden">
         <button @click="toggleMenu" aria-label="Toggle Menu">
-          <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

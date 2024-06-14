@@ -20,7 +20,7 @@
 
   >
     <swiper-slide v-for="(review, index) in reviews" :key="index">
-      <div class="bg-white px-[2rem] py-[2rem] h-full rounded-[24px] flex flex-col">
+      <div class="bg-white px-[2rem] py-[2rem] h-full rounded-[24px] text-center flex flex-col">
         <div class="w-fit mx-auto mb-[2rem]">
           <img :src="review.image" :alt="review.name" width="70px">
         </div>
