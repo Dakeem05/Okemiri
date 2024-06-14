@@ -14,7 +14,7 @@
       <div class="px-10 lg:px-0">
         <img src="../../assets/images/Rectangle 1.png" class="object-cover h-fit w-full" alt="Hero Img">
       </div>
-      <div class="border-[1.5px] border-gray-400 mt-5 lg:hidden block"></div>
+      <!-- <div class="border-[1.5px] border-gray-400 mt-5 lg:hidden block"></div> -->
     </div>
   </main>
 </section>
