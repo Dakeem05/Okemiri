@@ -29,7 +29,7 @@ const toggleMenu = () => {
       </div>
       
       <!-- Menu Links -->
-      <ul :class="{'hidden': !isMenuOpen, 'flex': isMenuOpen}" class="lg:flex flex-col lg:flex-row gap-6 lg:gap-8 font-medium text-lg lg:pt-0 pt-4 absolute lg:static bg-white lg:bg-transparent w-full lg:w-auto left-0 lg:left-auto top-16 lg:top-auto shadow-lg lg:shadow-none text-center lg:py-0">
+      <ul :class="{'hidden': !isMenuOpen, 'flex': isMenuOpen}" class="lg:flex flex-col lg:flex-row gap-6 lg:gap-8 font-medium text-lg lg:pt-0 pt-4 absolute lg:static h-100 bg-white lg:bg-transparent w-full lg:w-auto left-0 lg:left-auto top-16 lg:top-auto shadow-lg lg:shadow-none text-center lg:py-0">
         <li><router-link active-class="underline decoration-black" to="/" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">Home</router-link></li>
         <li><router-link active-class="underline decoration-black" to="/products" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">Products</router-link></li>
         <li><router-link active-class="underline decoration-black" to="/about-us" class="block lg:inline hover:underline decoration-[1.5px] hover:decoration-gray-400 underline-offset-4">About Us</router-link></li>
